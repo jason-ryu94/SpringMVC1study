@@ -43,4 +43,22 @@ public class RequestParamController {
      * @RequestParam 을 다 받고 싶으면 Map 으로 받으면된다.
      *
      */
+
+
+
+
+    // model attribute
+
+    /**
+     * @RequestParam 대신에 @ModelAttribute 를 사용하면 모든 파라미터가 모델에 들어가 있다.
+     * @param username
+     * @param age
+     * @return
+     */
+    @ResponseBody
+    @RequestMapping("/model-attribute-v1")
+    public String modelAttributeV1(@RequestParam String username, @RequestParam int age) {
+
+        return "ok";
+    }
 }
